@@ -57,7 +57,7 @@
 <template>
   <div class="container">
     <Cabecalho :tarefas-pendentes="getTarefasPendentes().length"/>
-    <Formulario :trocar-filtro="evento => estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="evento => evento.atrget.value" :cadastrar-tarefa="cadastrarTarefa"/>
+    <Formulario :trocar-filtro="evento => estado.filtro = evento.target.value" :tarefa-temp="estado.tarefaTemp" :edita-tarefa-temp="evento => estado.tarefaTemp = evento.target.value" :cadastrar-tarefa="cadastrarTarefa"/>
     <ListaDeTarefas :tarefas="getTarefasFiltradas()" /> 
   </div>
 </template>
